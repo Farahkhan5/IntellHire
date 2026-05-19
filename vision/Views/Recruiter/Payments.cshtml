@@ -1,0 +1,23 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Recruiter</th>
+            <th>Card Name</th>
+            <th>Amount</th>
+            <th>Admin Card</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Recruiter?.Name (@p.Recruiter?.Email)</td>
+                <td>@p.CardName</td>
+                <td>@p.Amount</td>
+                <td>@p.AdminCard</td>
+                <td>@p.PaidAt.ToString("dd-MM-yyyy HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+﻿@model BillingViewModel
+
+<div class="container">
+    <h2>Billing Information</h2>
+    <form asp-action="Billing" method="post">
+        <div class="form-group">
+            <label>Card Number</label>
+            <input asp-for="CardNumber" class="form-control" maxlength="16" placeholder="Enter 16-digit card number" />
+            <span class="text-danger" asp-validation-for="CardNumber"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Expiry Date (MM/YY)</label>
+            <input asp-for="Expiry" class="form-control" placeholder="MM/YY" />
+            <span class="text-danger" asp-validation-for="Expiry"></span>
+        </div>
+
+        <div class="form-group">
+            <label>CVV</label>
+            <input asp-for="CVV" class="form-control" maxlength="4" placeholder="123" />
+            <span class="text-danger" asp-validation-for="CVV"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Name on Card</label>
+            <input asp-for="CardName" class="form-control" />
+            <span class="text-danger" asp-validation-for="CardName"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Pay & Continue</button>
+    </form>
+</div>

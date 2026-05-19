@@ -1,0 +1,68 @@
+﻿@model Company
+
+@if (TempData["success"] != null)
+{
+	<div class="alert alert-success text-center">@TempData["success"]</div>
+}
+
+<!doctype html>
+<html lang="en">
+
+<!-- create-company41:40-->
+<head>
+	<!-- Basic Page Needs
+	================================================== -->
+	<title>Job Stock - Responsive Job Portal Bootstrap Template</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+
+    <form  method="post" enctype="multipart/form-data">
+	<div class="mb-3">
+		<input type="text" asp-for="name" class="form-control" id="name" placeholder="Company Name">
+		<span class="text-danger" asp-validation-for="name"></span>
+	</div>
+
+	<div class="mb-3">
+		<input type="text" asp-for="tagline" class="form-control" id="tagline" placeholder="Company Tagline">
+		<span class="text-danger" asp-validation-for="tagline"></span>
+	</div>
+
+	<div class="mb-3">
+		<input type="text" asp-for="category" class="form-control" id="category" placeholder="Category">
+		<span class="text-danger" asp-validation-for="category"></span>
+	</div>
+
+	<div class="mb-3">
+		<input type="text" asp-for="CEO" class="form-control" id="CEO" placeholder="Company CEO Name">
+		<span class="text-danger" asp-validation-for="CEO"></span>
+	</div>
+
+	<div class="mb-3">
+		<input type="email" asp-for="email" class="form-control" id="email" placeholder="Email">
+		<span class="text-danger" asp-validation-for="email"></span>
+	</div>
+
+	<div class="mb-3">
+		<input type="text" asp-for="address" class="form-control" id="address" placeholder="Company Address">
+		<span class="text-danger" asp-validation-for="address"></span>
+	</div>
+
+	<div class="mb-3">
+		<textarea class="form-control" asp-for="description" id="description" placeholder="Company Description"></textarea>
+		<span class="text-danger" asp-validation-for="description"></span>
+	</div>
+
+	<div class="mb-3">
+		<input type="file" asp-for="image" class="form-control" id="image">
+		<span class="text-danger" asp-validation-for="image"></span>
+	</div>
+
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</body>
+
+<!-- create-company41:40-->
+</html>
